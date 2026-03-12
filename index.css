@@ -1,130 +1,201 @@
+@font-face {
+  font-family: 'CM0102Font';
+  src: url('fonts/HANDGOTN.TTF');
+}
+
 /* Style the header with a grey background and some padding */
 .header {
   background-color: rgba(0, 0, 0, 0.85);
-  padding: 20px 10px;
-  position: sticky;
-  top: 0;
-
-  /* Dropdown Button */
-  #langBtn {
-    background-color: rgba(0, 0, 0, 0.85);
-    color: white;
-    padding: 12px;
-    border: none;
-  }
-
-  /* The container <div> - needed to position the dropdown content */
-  .langSelect {
-    position: relative;
-    display: inline-block;
-  }
-
-  /* Dropdown Content (Hidden by Default) */
-  .langSelect-content {
-    display: none;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.85);
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-  }
-
-  /* Links inside the dropdown */
-  .langSelect-content a {
-    color: black;
-    text-decoration: none;
-    display: block;
-  }
-  .langSelect-content a::before,
-  button::before {
-    content: "";
-    background-size: 200%;
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-    border-radius: 10px;
-    background-position-y: center;
-    background-position-x: 33%;
-  }
-  .langSelect-content a#en::before,
-  button.en::before {
-    background-image: url(./images/en-flag.png);
-  }
-  .langSelect-content a#pt::before,
-  button.pt::before {
-    background-image: url(./images/pt-flag.png);
-  }
-
-  /* Change color of dropdown links on hover */
-  .langSelect-content a:hover {
-    background-color: rgba(32, 32, 32, 0.85);
-  }
-
-  /* Show the dropdown menu on hover */
-  .langSelect:hover .langSelect-content {
-    display: block;
-  }
-
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .langSelect:hover #langBtn {
-    background-color: rgba(32, 32, 32, 0.85);
-  }
+  padding: 4% 2%;
+  margin: 2%;
+  flex: 0 1 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255, 255, 255, 0.5), inset -0.2em -0.2em 0.2em 0 rgba(0, 0, 0, 0.5);
+  height: 1%;
 }
 
-/* Style the header links */
-.header a {
+.titlebar-text {
+  text-decoration: none;
+  color: white;
+  font-size: xx-large;
+}
+
+.download-link {
+  color: white;
+}
+
+.content {
+  color: white;
+  flex: 1 0 auto;
+  height: 100%;
+}
+
+.sidebar {
+  width: 11%;
+  flex: 1 1 auto;
+  background-image: linear-gradient(to bottom, blue, black);
+  padding-top: 2%;
+  font-family: sans-serif;
+}
+
+.sidebar-div {
+  font-size: x-small;
   color: white;
   text-align: center;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 25px;
-  border-radius: 4px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px grey;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 1.5%;
+  height: 7%;
+  cursor: pointer;
 }
 
-/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
-.header a.logo {
-  font-size: 25px;
+.sidebar-div-arrow {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px grey;
+}
+
+.sidebar-arrows {
+  display: flex;
+  flex-flow: row;
+  font-size: x-small;
+  color: white;
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 1.5%;
+  height: 7%;
+  cursor: pointer;
+}
+
+.sidebar-div-50 {
+  width: 50%;
+}
+
+.yellow-sidebar-div {
+  color: yellow;
+}
+
+.inset {
+  border-style: inset;
+  box-shadow: inset 0.1em 0.1em 0.1em 0 rgba(0, 0, 0, 0.25), inset -0.1em -0.1em 0.1em 0 rgba(255, 255, 255, 0.25);
+}
+
+.outset {
+  border-style: outset;
+  box-shadow: outset 0.1em 0.1em 0.1em 0 rgba(0, 0, 0, 0.25), outset -0.1em -0.1em 0.1em 0 rgba(255, 255, 255, 0.25);
+}
+
+.gamewindow {
+  display: flex;
+  flex-flow: row;
+  height: 100%;
+  min-height: 600px;
+}
+
+.mainbody {
+  width: 89%;
+  display: flex;
+  flex-flow: column;
+  background-image: url(images/default_pic.png);
+  background-size: cover;
+}
+
+.sidebar-competitions {
+  position: absolute;
+}
+
+.sidebar-competitions-table {
+  position: relative;
+  left: 133%;
+  width: 150%;
+  background-color: green;
+  top: 133%;
+  color: black;
   font-weight: bold;
-}
+  text-align: left;
+  visibility: hidden;
 
-/* Change the background color on mouse-over */
-.header a:hover {
-  background-color: rgba(32, 32, 32, 0.85);
-  color: white;
-}
-
-/* Style the active/current link*/
-.header a.active {
-  background-color: dodgerblue;
-  color: white;
-}
-
-/* Float the link section to the right */
-.header-right {
-  float: right;
-}
-
-/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-@media screen and (max-width: 500px) {
-  .header a {
-    float: none;
-    display: block;
-    text-align: left;
+  td {
+    padding-left: 15%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
   }
-  .header-right {
-    float: none;
+
+  td:after {
+    content: '►';
+    font-size: smaller;
+    float: right;
+  }
+
+  tr:nth-child(even) {
+    background-color: darkgreen;
+  }
+
+  tr:hover {
+    background-color: yellow;
   }
 }
 
-.sitebody {
-  width: 95%;
-  margin: auto;
-  background-color: #823c16;
-  padding: 10px;
-  min-height: 100%;
+.contentbuttons {
+  display: flex;
+  flex-flow: row;
+  height: 7%;
+  padding: 0 2%;
+}
+
+.contentbuttons-div {
+  font-size: x-small;
+  background: darkblue;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  cursor: pointer;
+  box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255, 255, 255, 0.5), inset -0.2em -0.2em 0.2em 0 rgba(0, 0, 0, 0.5);
+}
+
+.contentbody {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 2%;
+  height: 66%;
+  padding: 4%;
+  padding-top: 2%;
+  text-align: justify;
+  overflow: auto;
 }
 
 body {
-  background-color: rgba(0, 0, 0, 0.85);
-  margin: 0;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: auto;
+  width: 1024px;
+  height: 768px;
+  width: 800px;
+  height: 600px;
+  font-family: 'CM0102Font', sans-serif;
+  background-repeat: repeat;
+  background-image: none;
+  background-size: auto;
+  background-clip: border-box;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 0 0 3px;
+  display: block;
 }

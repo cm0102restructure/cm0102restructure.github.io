@@ -1,27 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/index.css" />
     <script src="/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body>
-    <div class="header">
-      <a href="#" class="logo">Home Page</a>
-      <div class="header-right">
-        <a class="active" href="#home">Home</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
+    <div class="gamewindow">
+      <div class="sidebar">
+        <div class="sidebar-div inset yellow-sidebar-div">
+          <span id="date"></span>
+          <span id="time"></span>
+        </div>
+        <div class="sidebar-arrows">
+          <div class="sidebar-div-arrow outset sidebar-div-50">
+            &lt;&lt;&lt;
+          </div>
+          <div class="sidebar-div-arrow outset sidebar-div-50">
+            &gt;&gt;&gt;
+          </div>
+        </div>
+        <a href="/">
+          <span class="sidebar-div outset">Continue<br />Game</span>
+        </a>
+        <div class="sidebar-div outset">José<br />Mourinho</div>
+        <div class="sidebar-div outset" onclick="showHideCompsTable()">
+          <div class="sidebar-competitions">Competitions</div>
+          <table id="comps-table" class="sidebar-competitions-table">
+            <tr>
+              <td>World Cup</td>
+            </tr>
+            <tr>
+              <td>International</td>
+            </tr>
+            <tr>
+              <td>Worldwide Club</td>
+            </tr>
+            <tr>
+              <td>African</td>
+            </tr>
+            <tr>
+              <td>Asian</td>
+            </tr>
+            <tr>
+              <td>European</td>
+            </tr>
+            <tr>
+              <td>North American</td>
+            </tr>
+            <tr>
+              <td>Oceanian</td>
+            </tr>
+            <tr>
+              <td>South American</td>
+            </tr>
+          </table>
+        </div>
+        <div class="sidebar-div outset">Nations<br />& Clubs</div>
+        <div class="sidebar-div outset">Find</div>
+        <div class="sidebar-div outset yellow-sidebar-div">
+          Game<br />Options
+        </div>
       </div>
-    </div>
-    <div class="sitebody">
-      <h1 id="home">Home</h1>
-      <div>Welcome!</div>
-      <h1 id="contact">Contact</h1>
-      <div>Contact info</div>
-      <h1 id="about">About</h1>
-      <div>About the project</div>
+      <div class="mainbody">
+        <div class="header">
+          <a href="/" class="titlebar-text">2025/2026 Season Restructure</a>
+        </div>
+        <div class="content">
+          <div class="contentbuttons">
+            <div class="contentbuttons-div" onclick="setHomeText()">Home</div>
+            <div class="contentbuttons-div" onclick="setDownloadText()">
+              Download & Install Info
+            </div>
+            <div class="contentbuttons-div" onclick="setChangesText()">
+              List of Changes
+            </div>
+            <div class="contentbuttons-div" onclick="setPreviewsText()">
+              Previews
+            </div>
+          </div>
+          <div id="content-text" class="contentbody">
+            Welcome to the overview on the 2025/26 restructure patch, created by
+            davdav. Here you'll be able to download the patch and read detailed
+            info about what's been changed, along with some preview images.
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
