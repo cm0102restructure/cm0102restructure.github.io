@@ -199,3 +199,7 @@ body {
   padding: 0 0 3px;
   display: block;
 }
+
+img {
+  width: 100%;
+}

@@ -57,7 +57,5 @@ function setChangesText() {
 }
 
 function setPreviewsText() {
-  const homeText = "Previews here";
-  const compsTableElement = document.getElementById("content-text");
-  compsTableElement.innerHTML = homeText;
+  $("#content-text").load("previews.html");
 }
